@@ -11,10 +11,10 @@ class MeshRenderer;
 class Object
 {
 protected:
-	std::unordered_map<std::string, Component*> compMap;
+	std::unordered_map<std::string, Component> compMap;
 public:
-	void AddComponent();
-	Component* GetComponent();
+	void AddComponent(Component& comp);
+	Component GetComponent(std::string name);
 public:
 	void Start();
 	void Update();
